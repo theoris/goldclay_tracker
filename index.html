@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>GoldClay Tracker 1.0</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+</head>
+<body>
+  <header>
+    <h1>📈 GoldClay Tracker 1.0</h1>
+    <button onclick="toggleTheme()">🌓 สลับธีม</button>
+  </header>
+
+  <nav class="tabs">
+    <button onclick="switchTab('set')">SET Index</button>
+    <button onclick="switchTab('forex')">Forex</button>
+    <button onclick="switchTab('watchlist')">Watchlist</button>
+  </nav>
+
+  <main>
+    <section id="set-tab" class="tab active">
+      <h2>SET Market Data</h2>
+      <button onclick="loadSettrade()">โหลดข้อมูล</button>
+      <div id="settrade-output"></div>
+      <canvas id="setChart"></canvas>
+    </section>
+
+    <section id="forex-tab" class="tab">
+      <h2>Forex (cTrader)</h2>
+      <p>📡 ส่วนนี้ยังเป็น mock-up รอเชื่อมต่อ FIX Protocol</p>
+    </section>
+
+    <section id="watchlist-tab" class="tab">
+      <h2>⭐ Watchlist</h2>
+      <input id="symbolInput" placeholder="ใส่ symbol เช่น S50Z25" />
+      <button onclick="addToWatchlist()">เพิ่ม</button>
+      <ul id="watchlist"></ul>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="main.js"></script>
+  <script src="settrade.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

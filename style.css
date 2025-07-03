@@ -1,0 +1,67 @@
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --accent: #0055ff;
+  --card: #f4f4f4;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #f0f0f0;
+  --accent: #ffd700;
+  --card: #1f1f1f;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+  padding: 1rem;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tabs button {
+  margin: 0.5rem 0.5rem 1rem 0;
+  padding: 0.5rem 1rem;
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.tab {
+  display: none;
+}
+.tab.active {
+  display: block;
+  background-color: var(--card);
+  padding: 1rem;
+  border-radius: 8px;
+}
+input {
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+@media (max-width: 600px) {
+  body {
+    padding: 0.5rem;
+  }
+  input {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}
