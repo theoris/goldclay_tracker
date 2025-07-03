@@ -52,3 +52,10 @@ function addToWatchlist() {
     input.value = '';
   }
 }
+setInterval(() => {
+  const isForexTab = document.getElementById('forex-tab')?.classList.contains('active');
+  if (isForexTab) {
+    loadForexPrices();
+  }
+}, 30000); // 30 วินาที
+
