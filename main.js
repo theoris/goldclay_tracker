@@ -80,7 +80,7 @@ function loadForexPrices() {
 
   output.innerHTML = '📡 กำลังโหลด...';
 
-  fetch('/.netlify/functions/forex-prices')
+  fetch('/.netlify/functions/forex_prices')
     .then(res => res.json())
     .then(data => {
       output.innerHTML = `
