@@ -2,7 +2,13 @@
 function switchTab(tabName) {
   document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
   document.getElementById(`${tabName}-tab`).classList.add('active');
+
+  // โหลดเฉพาะเมื่อเปิดแท็บ forex
+  if (tabName === 'forex') {
+    loadForexPrices();
+  }
 }
+
 
 // ธีม Light/Dark Toggle
 function toggleTheme() {
